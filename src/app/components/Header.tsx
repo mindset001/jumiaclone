@@ -24,7 +24,7 @@ const Header = () => {
        <div className='flex items-center'>
          <div className="flex items-center flex-1 mx-8 bg-white rounded-lg border">
           <div className='bg-yellow rounded full p-2' >
-            <SearchOutlined className="text-2xl text-[#fff] ml-3" />
+            <SearchOutlined className="text-xl text-[#fff] " />
           </div>
           <input
             type="text"
@@ -36,9 +36,9 @@ const Header = () => {
          <button className="bg-orange-500 text-white rounded-sm px-4 py-2 text-xl font-medium mr-2">Search</button>
        </div>
         <div className="flex items-center gap-8">
-          <span className="flex items-center text-xl text-gray-900 font-normal cursor-pointer"><UserOutlined className="text-[2px] mr-2" /> Account <DownOutlined className="ml-1" /></span>
-          <span className="flex items-center text-xl text-gray-900 font-normal cursor-pointer"><QuestionCircleOutlined className="text-2xl mr-2" /> Help <DownOutlined className="ml-1" /></span>
-          <span className="flex items-center text-xl text-gray-900 font-normal cursor-pointer"><ShoppingCartOutlined className="text-2xl mr-2" /> Cart</span>
+          <span className="flex items-center text-[16px] text-gray-900 font-normal cursor-pointer"><UserOutlined className="text-sm mr-2" /> Account <DownOutlined className="ml-1 text-[10px]" /></span>
+          <span className="flex items-center text-[16px] text-gray-900 font-normal cursor-pointer"><QuestionCircleOutlined className="text-sm mr-2" /> Help <DownOutlined className="ml-1 text-[10px]" /></span>
+          <span className="flex items-center text-[16px] text-gray-900 font-normal cursor-pointer"><ShoppingCartOutlined className="text-sm mr-2" /> Cart</span>
         </div>
       </div>
     </header>

@@ -31,22 +31,22 @@ const promos = [
         image: Jumia,
         caption: 'Groceries',
     },
-    {
-        image: Jumia,
-        caption: 'Video Games',
-    },
-    {
-        image: Jumia,
-        caption: 'Toys & Games',
-    },
-    {
-        image: Jumia,
-        caption: 'Video Games',
-    },
-    {
-        image: Jumia,
-        caption: 'Toys & Games',
-    },
+    // {
+    //     image: Jumia,
+    //     caption: 'Video Games',
+    // },
+    // {
+    //     image: Jumia,
+    //     caption: 'Toys & Games',
+    // },
+    // {
+    //     image: Jumia,
+    //     caption: 'Video Games',
+    // },
+    // {
+    //     image: Jumia,
+    //     caption: 'Toys & Games',
+    // },
 ];
 
 import { useState } from 'react';
@@ -67,7 +67,7 @@ const PromoCarousel = () => {
     };
 
     return (
-        <div className="flex items-center bg-white rounded-xl py-4 my-6 shadow">
+        <div className="flex items-center bg-white rounded-sm py-4 my-6 shadow">
             <button
                 className={`bg-gray-200 rounded-full w-12 h-12 flex items-center justify-center text-3xl text-gray-500 mx-2 ${!canGoLeft ? 'opacity-40 cursor-not-allowed' : ''}`}
                 onClick={handleLeft}
@@ -78,16 +78,16 @@ const PromoCarousel = () => {
             </button>
             <div className="relative w-full overflow-hidden" style={{ minWidth: `${VISIBLE_COUNT * 170}px` }}>
                 <div
-                    className="flex gap-4 px-2 transition-transform duration-500"
+                    className="flex transition-transform duration-500 overflow-scrollbar-hide"
                     style={{
-                        width: `${promos.length * 170}px`,
-                        transform: `translateX(-${startIdx * 174}px)` // 170px card + 4px gap
+                        width: `${promos.length * 180}px`,
+                        transform: `translateX(-${startIdx * 180}px)`
                     }}
-                >   
+                >
                     {promos.map((promo, idx) => (
                         <div
                             key={idx}
-                            className="w-[170px] h-[210px] rounded-xl flex flex-col items-center justify-center p-4 bg-white border border-gray-100"
+                            className="w-[170px] h-[210px] rounded-xl flex flex-col items-center justify-center p-4 bg-white border border-gray-100 mx-[5px]"
                         >
                             {promo.image && (
                                 <Image
@@ -113,6 +113,6 @@ const PromoCarousel = () => {
             </button>
         </div>
     );
-};
+}
 
 export default PromoCarousel;

@@ -90,8 +90,8 @@ const FlashSales = () => {
   const seconds = timeLeft % 60;
 
   return (
-    <section className="bg-white rounded-xl mt-8 mb-8 shadow pb-4">
-      <div className="flex items-center justify-between bg-red-600 text-white rounded-t-xl px-6 py-4 text-lg font-semibold">
+    <section className="bg-white rounded-sm mt-8 mb-8 shadow pb-4">
+      <div className="flex items-center justify-between bg-red-600 text-white rounded-t-sm px-6 py-4 text-lg font-semibold">
         <div className="flex items-center gap-2"><span className="text-2xl">⚡</span> <span className="text-2xl font-bold">Flash Sales</span></div>
         <div className="text-lg font-semibold">Time Left: <span className="font-bold text-2xl">{pad(hours)}h : {pad(minutes)}m : {pad(seconds)}s</span></div>
         <a href="#" className="flex items-center gap-1 text-lg font-semibold text-white hover:underline">See All <span className="text-xl">&#8594;</span></a>
