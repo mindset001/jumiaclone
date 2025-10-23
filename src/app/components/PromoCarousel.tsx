@@ -55,12 +55,7 @@ const PromoCarousel = () => {
         {promos.map((promo, idx) => (
           <div
             key={idx}
-            className={
-              promo.highlight
-                ? 'min-w-[170px] max-w-[170px] h-[210px] rounded-xl shadow-lg flex flex-col items-center justify-end p-4 relative border-2 border-gray-200 bg-blue-100 z-10'
-                : 'min-w-[170px] max-w-[170px] h-[210px] rounded-xl shadow flex flex-col items-center justify-end p-4 relative'
-            }
-            style={promo.bg ? { background: promo.bg } : {}}
+           
           >
             {promo.image && (
               <Image

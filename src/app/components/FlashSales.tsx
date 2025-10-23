@@ -4,7 +4,7 @@ import React, { useEffect, useState } from 'react';
 import Image from 'next/image';
 import PhillyImage from '../../../public/images/philly.jpg';
 import Redmi from '../../../public/images/redmi.jpg';
-import Nivea from '../../../public/images/Nivea.jpg';
+import Nivea from '../../../public/images/nivea.jpg';
 import Silver from '../../../public/images/two.jpg';
 import Fan from '../../../public/images/fan.jpg';
 import Four from '../../../public/images/four.jpg'
