@@ -4,7 +4,7 @@ import PromoCarousel from "./components/PromoCarousel";
 
 export default function Home() {
   return (
-    <div className="px-8">
+    <div className="md:px-8">
       <Hero />
   <PromoCarousel />
   <FlashSales />

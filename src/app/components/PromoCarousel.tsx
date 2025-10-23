@@ -67,7 +67,7 @@ const PromoCarousel = () => {
     };
 
     return (
-        <div className="flex items-center bg-white rounded-sm py-4 my-6 shadow">
+    <div className="flex items-center bg-white rounded-sm py-4 my-6 shadow w-full max-w-full px-2 sm:px-4 md:px-8">
             <button
                 className={`bg-gray-200 rounded-full w-12 h-12 flex items-center justify-center text-3xl text-gray-500 mx-2 ${!canGoLeft ? 'opacity-40 cursor-not-allowed' : ''}`}
                 onClick={handleLeft}
@@ -76,18 +76,18 @@ const PromoCarousel = () => {
             >
                 <span>&#8592;</span>
             </button>
-            <div className="relative w-full overflow-hidden" style={{ minWidth: `${VISIBLE_COUNT * 170}px` }}>
+            <div className="relative w-full overflow-hidden">
                 <div
-                    className="flex transition-transform duration-500 overflow-scrollbar-hide"
+                    className="flex transition-transform duration-500"
                     style={{
-                        width: `${promos.length * 180}px`,
-                        transform: `translateX(-${startIdx * 180}px)`
+                        width: `calc(${promos.length} * 44vw)`,
+                        transform: `translateX(-${startIdx * 44}vw)`
                     }}
                 >
                     {promos.map((promo, idx) => (
                         <div
                             key={idx}
-                            className="w-[170px] h-[210px] rounded-xl flex flex-col items-center justify-center p-4 bg-white border border-gray-100 mx-[5px]"
+                            className="w-[44vw] max-w-[170px] min-w-[120px] h-[28vw] max-h-[210px] min-h-[120px] rounded-xl flex flex-col items-center justify-center p-2 sm:p-4 bg-white border border-gray-100 mx-[2px] sm:mx-[5px]"
                         >
                             {promo.image && (
                                 <Image
@@ -95,10 +95,10 @@ const PromoCarousel = () => {
                                     alt={promo.caption}
                                     width={150}
                                     height={90}
-                                    className="w-[150px] h-[90px] object-cover rounded-lg mb-2"
+                                    className="w-full h-[18vw] max-h-[90px] object-cover rounded-lg mb-2"
                                 />
                             )}
-                            <div className="text-[12px] text-gray-900 text-center mt-2 font-medium whitespace-normal leading-tight">{promo.caption}</div>
+                            <div className="text-xs sm:text-[12px] text-gray-900 text-center mt-2 font-medium whitespace-normal leading-tight">{promo.caption}</div>
                         </div>
                     ))}
                 </div>

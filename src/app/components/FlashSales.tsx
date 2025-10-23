@@ -92,9 +92,17 @@ const FlashSales = () => {
   return (
     <section className="bg-white rounded-sm mt-8 mb-8 shadow pb-4">
       <div className="flex items-center justify-between bg-red-600 text-white rounded-t-sm px-6 py-4 text-lg font-semibold">
-        <div className="flex items-center gap-2"><span className="text-2xl">⚡</span> <span className="text-2xl font-bold">Flash Sales</span></div>
-        <div className="text-lg font-semibold">Time Left: <span className="font-bold text-2xl">{pad(hours)}h : {pad(minutes)}m : {pad(seconds)}s</span></div>
-        <a href="#" className="flex items-center gap-1 text-lg font-semibold text-white hover:underline">See All <span className="text-xl">&#8594;</span></a>
+        <div className='flex  items-left md:hidden'>
+          <div><span className="text-2xl">⚡</span></div>
+          <div className='flex flex-col'>
+             <div className="flex items-center gap-2"> <span className="text-[12px] md:text-2xl font-bold">Flash Sales</span></div>
+        <div className="text-[12px] md:text-lg font-semibold">Time Left: <span className="font-bold text-[12px] md:text-2xl">{pad(hours)}h : {pad(minutes)}m : {pad(seconds)}s</span></div>
+            
+          </div>
+        </div>
+        <div className="hidden md:flex items-center gap-2"><span className="text-2xl">⚡</span> <span className="text-[12px] md:text-2xl font-bold">Flash Sales</span></div>
+        <div className="hidden md:block text-[12px] md:text-lg font-semibold">Time Left: <span className="font-bold text-[12px] md:text-2xl">{pad(hours)}h : {pad(minutes)}m : {pad(seconds)}s</span></div>
+        <a href="#" className="flex items-center gap-1 text-[12px] md:text-lg font-semibold text-white hover:underline">See All <span className="text-xl">&#8594;</span></a>
       </div>
       <div className="mt-6 flex gap-4 overflow-x-auto px-6 pt-4">
         {products.map((p, idx) => (
