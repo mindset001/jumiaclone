@@ -63,8 +63,8 @@ const PromoCarousel = () => {
                 alt={promo.title || promo.caption}
                 width={170}
                 height={90}
-                className="w-full h-[90px] object-cover rounded-lg mb-2"
-                style={{objectFit: 'cover'}}
+                className="h-[90px] object-cover rounded-lg mb-2"
+                
               />
             )}
             {promo.title && (

@@ -96,16 +96,16 @@ const FlashSales = () => {
         <div className="text-lg font-semibold">Time Left: <span className="font-bold text-2xl">{pad(hours)}h : {pad(minutes)}m : {pad(seconds)}s</span></div>
         <a href="#" className="flex items-center gap-1 text-lg font-semibold text-white hover:underline">See All <span className="text-xl">&#8594;</span></a>
       </div>
-      <div className="flex gap-4 overflow-x-auto px-6 pt-4">
+      <div className="mt-6 flex gap-4 overflow-x-auto px-6 pt-4">
         {products.map((p, idx) => (
-          <div key={idx} className="bg-white rounded-lg shadow min-w-[220px] max-w-[220px] p-3 flex flex-col items-start relative">
+          <div key={idx} className="mt-6 bg-white rounded-lg shadow min-w-[220px] max-w-[220px] p-3 flex flex-col items-start relative">
             <div className="relative w-full h-[120px] flex items-center justify-center mb-2">
               <Image
                 src={p.image}
                 alt={p.name}
                 width={220}
                 height={120}
-                className="max-w-full max-h-full rounded-lg object-contain"
+                className=" rounded-lg object-contain"
                 style={{objectFit: 'contain'}}
                 unoptimized
               />
